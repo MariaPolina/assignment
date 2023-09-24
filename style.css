@@ -26,6 +26,22 @@
     font-display: swap;
 }
 
+/*----variables----------------------------------------------------------------*/
+
+:root {
+    --primary-color: #FFFFFF;
+    --font-color-strong: #000000;
+    --font-color-light: #666880;
+    --font-color-medium: #1C1733;
+    --corp-color-primary: #FFD500;
+    --corp-color-secondary: #2DBAEE;
+    --corp-color-attention: #F84CAC;
+    --bg-color-main: #FAFAFD;
+    --bg-color-primary: rgba(45, 186, 238, 0.10);
+    --border-color-primary: #D8DDEF;
+    --border-color-secondary: #EDEEF7;
+}
+
 /*----general styles and reset-----------------------------------------------*/
 
 html,
@@ -36,7 +52,7 @@ body {
     font-style: normal;
     font-weight: bold;
     font-size: 100%;
-    color: #000000;
+    color: var(--font-color-strong);
     line-height: 1;
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -89,7 +105,7 @@ select, input {
     align-items: center;
     width: 100%;
     height: 80px;
-    background-color: #FFD500;
+    background-color: var(--corp-color-primary);
 }
 
 .header__logo {
@@ -111,7 +127,7 @@ select, input {
     display: block;
     width: 100%;
     height: 1px;
-    background-color: #EDEEF7;
+    background-color: var(--border-color-secondary);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -124,23 +140,23 @@ select, input {
 
 .tabs__wrapper>div {
     min-width: 71px;
-    color: #1C1733;
+    color: var(--font-color-medium);
     font-size: 12px;
     font-weight: normal;
     text-transform: uppercase;
     padding: 9px 12px;
     text-align: center;
-    border: 1px solid #FFFFFF;
+    border: 1px solid var(--primary-color);
     cursor: pointer;
 }
 
 .tabs__wrapper>div.active {
     font-weight: bold;
     border-radius: 4px 4px 0px 0px;
-    border: 1px solid #EDEEF7;
-    border-bottom: 1px solid #FFFFFF;
-    background: #FFFFFF;
-    box-shadow: 0px -1px 0px 0px #FFF inset;
+    border: 1px solid var(--border-color-secondary);
+    border-bottom: 1px solid var(--primary-color);
+    background: var(--primary-color);
+    box-shadow: 0px -1px 0px 0px var(--primary-color) inset;
     position: relative;
     z-index: 2;
 }
@@ -173,17 +189,17 @@ select, input {
     width: 100%;
     min-height: 217px;
     border-radius: 8px;
-    border: 1px solid #FFD500;
+    border: 1px solid var(--corp-color-primary);
     padding: 16px 24px;
     transition: all ease .4s;
 }
 
 .property:nth-child(3n+2) {
-    border: 1px solid #2DBAEE;
+    border: 1px solid var(--corp-color-secondary);
 }
 
 .property:hover {
-    border: 1px solid #F84CAC;
+    border: 1px solid var(--corp-color-attention);
     box-shadow: 0px 4px 8px 0px rgba(102, 103, 128, 0.25);
     padding-top: 6px;
 }
@@ -208,7 +224,7 @@ select, input {
 }
 
 .property__text {
-    color: #666880;
+    color: var(--font-color-light);
     text-align: center;
     font-size: 14px;
     font-weight: 400;
@@ -239,13 +255,13 @@ select, input {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #D8DDEF;
+    border-bottom: 1px solid var(--border-color-primary);
     padding-bottom: 9px;
     margin-bottom: 15px;
 }
 
 .steps__title {
-    color: #1C1733;
+    color: var(--font-color-medium);
     font-size: 18px;
     line-height: normal;
 }
@@ -260,7 +276,7 @@ select, input {
 /*--step-------------------------*/
 
 .step__title {
-    color: #666880;
+    color: var(--font-color-light);
     font-size: 13px;
     line-height: normal;
     margin-bottom: 15px;
@@ -268,7 +284,7 @@ select, input {
 }
 
 .step__title>span {
-    color: #1C1733;
+    color: var(--font-color-medium);
     font-size: 14px;
     font-weight: 400;
     line-height: normal;
@@ -282,7 +298,7 @@ select, input {
 }
 
 .step__and {
-    color: #666880;
+    color: var(--font-color-light);
     font-size: 12px;
     line-height: normal;
     text-transform: uppercase;
@@ -325,7 +341,7 @@ select, input {
 
 .add-btn {
     height: 32px;
-    color: #2DBAEE;
+    color: var(--corp-color-secondary);
     font-size: 14px;
     line-height: normal;
     padding: 7px 0 8px 0;
@@ -337,7 +353,7 @@ select, input {
 
 .add-step {
     border-radius: 4px;
-    background: rgba(45, 186, 238, 0.10);
+    background: var(--bg-color-primary);
     text-align: center;
 }
 
@@ -347,17 +363,17 @@ select, input {
     display: inline-block;
     max-width: 100%;
     min-height: 32px;
-    color: #1C1733;
+    color: var(--font-color-medium);
     font-size: 14px;
     font-weight: 700;
     line-height: 1;
     padding: 8px 26px 7px 12px;
     border-radius: 4px;
-    border: 1px solid #D8DDEF;
+    border: 1px solid var(--border-color-primary);
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
-    background: #FAFAFD url(img/arrow-down.svg) right 12px center no-repeat;
+    background: var(--bg-color-main) url(img/arrow-down.svg) right 12px center no-repeat;
     cursor: pointer;
 }
 
@@ -394,13 +410,13 @@ input[type='text']:active {
 /*--input-------------------------*/
 
 input[type='text'] {
-    color: #1C1733;
+    color: var(--font-color-medium);
     font-size: 14px;
     font-weight: 400;
     line-height: normal;
     border-radius: 0px 4px 4px 0px;
-    border: 1px solid #D8DDEF;
-    background: #FFF;
+    border: 1px solid var(--border-color-primary);
+    background: var(--primary-color);
     padding: 7px 12px 8px 12px;
     min-width: 218px;
 }
@@ -417,9 +433,9 @@ input[type='text'] {
     width: 32px;
     height: 100%;
     border-radius: 4px 0px 0px 4px;
-    border: 1px solid #D8DDEF;
+    border: 1px solid var(--border-color-primary);
     border-right: none;
-    background: #FAFAFD url(img/input.svg) center center no-repeat;
+    background: var(--bg-color-main) url(img/input.svg) center center no-repeat;
     padding: 12px 11px;
     cursor: pointer;
 }
