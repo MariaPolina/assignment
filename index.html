@@ -6,11 +6,153 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet" />
-    <title>Document</title>
+    <title>Assignment CSS Developer</title>
+    <link rel="shortcut icon" href="img/favicon.svg">
 </head>
 
 <body>
 
+    <header class="header">
+        <div class="container">
+            <a class="header__logo" href="#"></a>
+        </div>
+    </header>
+    <main>
+        <div class="tabs-s">
+            <div class="tabs">
+                <div class="container">
+                    <div class="tabs__wrapper">
+                        <div class="tab1 active">Customer Properties</div>
+                        <div class="tab2">Events</div>
+                        <div class="tab3">DeFINITIONS</div>
+                        <div class="tab4">Mapping</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tabs-items">
+                <div class="tabs-item" id="tab1">
+                    <div class="container">
+                        <div class="properties">
+                            <a href="#" class="property">
+                                <div class="property__image"><img src="img/Customers.svg" alt="Customers"></div>
+                                <h3 class="property__title">Customers</h3>
+                                <div class="property__text">Import new customers with custom attributes.</div>
+                            </a>
+                            <a href="#" class="property">
+                                <div class="property__image"><img src="img/Customers.svg" alt="Customers"></div>
+                                <h3 class="property__title">Catalogs</h3>
+                                <div class="property__text">Ut cursus maximus lorem eget egestas.</div>
+                            </a>
+                            <a href="#" class="property">
+                                <div class="property__image"><img src="img/Customers.svg" alt="Customers"></div>
+                                <h3 class="property__title">Vouchers</h3>
+                                <div class="property__text">Nam et egestas mauris. Morbi varius, magna in viverra.</div>
+                            </a>
+                            <a href="#" class="property">
+                                <div class="property__image"><img src="img/Customers.svg" alt="Customers"></div>
+                                <h3 class="property__title">Emails</h3>
+                                <div class="property__text">Import new customers with cusotm attributes.</div>
+                            </a>
+                            <a href="#" class="property">
+                                <div class="property__image"><img src="img/Customers.svg" alt="Customers"></div>
+                                <h3 class="property__title">Analyses</h3>
+                                <div class="property__text">Ut cursus maximus lorem eget egestas.</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs-item" id="tab2">
+                    <div class="container">
+                        <p class="tabs-item__text">Events</p>
+                    </div>
+                </div>
+                <div class="tabs-item" id="tab3">
+                    <div class="container">
+                        <p class="tabs-item__text">Definitions</p>
+                    </div>
+                </div>
+                <div class="tabs-item" id="tab4">
+                    <div class="container">
+                        <p class="tabs-item__text">Mapping</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="steps-s">
+            <div class="container">
+                <div class="steps__header">
+                    <h1 class="steps__title">Funnel Steps</h1>
+                    <div class="steps__period">
+                        <div class="add-btn">+ Funnel completion period</div>
+                        <div class="select-calendar">
+                            <select class="select " name="Lifetime" id="Lifetime">
+                                <option>Lifetime</option>
+                                <option>1w</option>
+                                <option>1m</option>
+                                <option>1y</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <h4 class="step__title">1. Step:<span>first_session</span></h4>
+                    <div class="step__wrapper">
+                        <div class="step__name">
+                            <select class="select" name="first_session" id="first_session">
+                                <option>first_session</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                            <p class="step__and">AND</p>
+                        </div>
+                        <div class="step__rows">
+                            <div class="step__row">
+                                <select class="select" name="device" id="device">
+                                    <option>device</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                </select>
+                                <select class="select" name="equals1" id="equals1">
+                                    <option>equals</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                </select>
+                                <div class="input__wrapper">
+                                    <div class="input__btn"></div>
+                                    <input type="text" value="mobile">
+                                </div>
+                            </div>
+                            <div class="step__row">
+                                <select class="select" name="city" id="city">
+                                    <option>city</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </select>
+                                <select class="select" name="equals2" id="equals2">
+                                    <option>equals</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                </select>
+                                <div class="input__wrapper">
+                                    <div class="input__btn"></div>
+                                    <input type="text" value="Bratislava">
+                                </div>
+                            </div>
+                            <div class="step__row">
+                                <div class="add-btn">Refine more</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="add-btn add-step">+ Add funnel step</div>
+            </div>
+        </section>
+    </main>
     <script src="index.js"></script>
 </body>
 

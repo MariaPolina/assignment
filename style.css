@@ -1,0 +1,425 @@
+/*----fonts----------------------------------------------------------------*/
+
+@font-face {
+    font-family: 'Lato';
+    src: url('fonts/Lato-Bold.eot');
+    src: url('fonts/Lato-Bold.eot') format('embedded-opentype'),
+        url('fonts/Lato-Bold.woff2') format('woff2'),
+        url('fonts/Lato-Bold.woff') format('woff'),
+        url('fonts/Lato-Bold.ttf') format('truetype'),
+        url('fonts/Lato-Bold.svg') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('fonts/Lato-Regular.eot');
+    src: url('fonts/Lato-Regular.eot') format('embedded-opentype'),
+        url('fonts/Lato-Regular.woff2') format('woff2'),
+        url('fonts/Lato-Regular.woff') format('woff'),
+        url('fonts/Lato-Regular.ttf') format('truetype'),
+        url('fonts/Lato-Regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/*----general styles and reset-----------------------------------------------*/
+
+html,
+body {
+    width: 100vw;
+    min-height: 100%;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 100%;
+    color: #000000;
+    line-height: 1;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+* {
+    min-height: 0;
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+select, input {
+    font-family: inherit;
+}
+
+.container {
+    width: 100%;
+    max-width: 992px;
+    margin: 0 auto;
+    padding-right: 16px;
+    padding-left: 16px;
+}
+
+/*----header--------------------------------------------------------------------*/
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background-color: #FFD500;
+}
+
+.header__logo {
+    display: block;
+    width: 138.5px;
+    height: 30px;
+    background: url(img/Artboard.svg) left center no-repeat;
+}
+
+/*----tabs-------------------------------------------------------------------------*/
+
+.tabs {
+    position: relative;
+    margin-top: 25px;
+}
+
+.tabs::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #EDEEF7;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.tabs__wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.tabs__wrapper>div {
+    min-width: 71px;
+    color: #1C1733;
+    font-size: 12px;
+    font-weight: normal;
+    text-transform: uppercase;
+    padding: 9px 12px;
+    text-align: center;
+    border: 1px solid #FFFFFF;
+    cursor: pointer;
+}
+
+.tabs__wrapper>div.active {
+    font-weight: bold;
+    border-radius: 4px 4px 0px 0px;
+    border: 1px solid #EDEEF7;
+    border-bottom: 1px solid #FFFFFF;
+    background: #FFFFFF;
+    box-shadow: 0px -1px 0px 0px #FFF inset;
+    position: relative;
+    z-index: 2;
+}
+
+.tabs-item {
+    display: none;
+}
+
+.tabs-item:first-child {
+    display: block;
+}
+
+/*--properties cards-------------------------*/
+
+.properties {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    max-width: 792px;
+    margin: 65px auto 72px auto;
+}
+
+.property {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    max-width: 248px;
+    width: 100%;
+    min-height: 217px;
+    border-radius: 8px;
+    border: 1px solid #FFD500;
+    padding: 16px 24px;
+    transition: all ease .4s;
+}
+
+.property:nth-child(3n+2) {
+    border: 1px solid #2DBAEE;
+}
+
+.property:hover {
+    border: 1px solid #F84CAC;
+    box-shadow: 0px 4px 8px 0px rgba(102, 103, 128, 0.25);
+    padding-top: 6px;
+}
+
+.property .property__image {
+    width: 36.923px;
+    height: 36px;
+    margin-bottom: 26px;
+}
+
+.property__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.property__title {
+    text-align: center;
+    font-size: 18px;
+    line-height: normal;
+    margin-bottom: 13px;
+}
+
+.property__text {
+    color: #666880;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/*--blank tabs text-------------------------*/
+
+.tabs-item__text {
+    max-width: 792px;
+    margin: 65px auto 72px auto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+/*----funnel steps-------------------------------------------------------------------------*/
+
+.steps-s {
+    padding-bottom: 419px;
+}
+
+/*--steps header-------------------------*/
+
+.steps__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #D8DDEF;
+    padding-bottom: 9px;
+    margin-bottom: 15px;
+}
+
+.steps__title {
+    color: #1C1733;
+    font-size: 18px;
+    line-height: normal;
+}
+
+.steps__period {
+    display: flex;
+    flex-direction: row;
+    column-gap: 16px;
+    align-items: center;
+}
+
+/*--step-------------------------*/
+
+.step__title {
+    color: #666880;
+    font-size: 13px;
+    line-height: normal;
+    margin-bottom: 15px;
+    padding-left: 3px;
+}
+
+.step__title>span {
+    color: #1C1733;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 12px;
+}
+
+.step__name {
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
+}
+
+.step__and {
+    color: #666880;
+    font-size: 12px;
+    line-height: normal;
+    text-transform: uppercase;
+    text-align: right;
+    position: relative;
+}
+
+.step__and::after {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 40px;
+    background: url(img/constr.svg) center center no-repeat;
+    position: absolute;
+    top: -34px;
+    right: -12px;
+}
+
+.step__wrapper {
+    display: flex;
+    flex-direction: row;
+    column-gap: 16px;
+    margin-bottom: 17px;
+}
+
+.step__rows {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+.step__row {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+/*--add button-------------------------*/
+
+.add-btn {
+    height: 32px;
+    color: #2DBAEE;
+    font-size: 14px;
+    line-height: normal;
+    padding: 7px 0 8px 0;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+/*--add button variant-------------------------*/
+
+.add-step {
+    border-radius: 4px;
+    background: rgba(45, 186, 238, 0.10);
+    text-align: center;
+}
+
+/*--select-------------------------*/
+
+.select {
+    display: inline-block;
+    max-width: 100%;
+    min-height: 32px;
+    color: #1C1733;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    padding: 8px 26px 7px 12px;
+    border-radius: 4px;
+    border: 1px solid #D8DDEF;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #FAFAFD url(img/arrow-down.svg) right 12px center no-repeat;
+    cursor: pointer;
+}
+
+.select:focus-visible,
+.select:focus,
+.select:active,
+input[type='text']:focus-visible,
+input[type='text']:focus,
+input[type='text']:active {
+    outline: none;
+}
+
+/*--select variant-------------------------*/
+
+.select-calendar .select {
+    padding-left: 32px;
+}
+
+.select-calendar {
+    position: relative;
+}
+
+.select-calendar::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: url(img/Calendar.svg) center center no-repeat;
+    position: absolute;
+    top: 10px;
+    left: 12px;
+}
+
+/*--input-------------------------*/
+
+input[type='text'] {
+    color: #1C1733;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 0px 4px 4px 0px;
+    border: 1px solid #D8DDEF;
+    background: #FFF;
+    padding: 7px 12px 8px 12px;
+    min-width: 218px;
+}
+
+/*--input variant-------------------------*/
+
+.input__wrapper {
+    display: flex;
+    height: 32px;
+}
+
+.input__btn {
+    display: inline-block;
+    width: 32px;
+    height: 100%;
+    border-radius: 4px 0px 0px 4px;
+    border: 1px solid #D8DDEF;
+    border-right: none;
+    background: #FAFAFD url(img/input.svg) center center no-repeat;
+    padding: 12px 11px;
+    cursor: pointer;
+}
